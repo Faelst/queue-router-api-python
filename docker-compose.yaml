@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-container
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+  
+  redis:
+    image: "redis"
+    container_name: redis-container
+    ports:
+      - "6379:6379"
+      
